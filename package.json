@@ -1,0 +1,15 @@
+{
+  "name": "com.ab.fwp.scaffold",
+  "version": "0.1.0",
+  "displayName": "ab:scaffold",
+  "description": "architecture around brains and capacities",
+  "category": "framework",
+  "keywords": [
+    "build"
+  ],
+  "author": {
+    "name": "Andrei Berloni",
+    "email": "dev@andreberlemont.com",
+    "url": "http://www.andreberlemont.com"
+  }
+}
