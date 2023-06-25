@@ -96,8 +96,13 @@ namespace fwp.scaffold
 
             for (int i = 0; i < kappas.Count; i++)
             {
-                if (!kappas[i].canUpdate()) continue;
-                kappas[i].updateKappa(dt);
+                var inst = kappas[i] as iKappaUpdatable;
+                if(inst != null)
+                {
+                    if (!inst.canUpdate()) continue;
+                    inst.updateKappa(dt);
+                }
+                
             }
         }
 

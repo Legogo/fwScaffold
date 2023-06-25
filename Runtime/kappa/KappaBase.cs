@@ -49,21 +49,11 @@ namespace fwp.scaffold
         virtual protected void onFreeze(bool freezed)
         { }
 
-        virtual public void updateKappa(float dt)
-        {
-        }
-
         public BrainBase getParentBrain() => _brain;
 
         public bool isFromSameBrain(KappaBase kap)
         {
             return kap.getParentBrain() == getParentBrain();
-        }
-
-        virtual public bool canUpdate()
-        {
-            if (isFreezed()) return false;
-            return true;
         }
 
         /// <summary>
@@ -99,22 +89,6 @@ namespace fwp.scaffold
             return base.stamp() + $" brain:<b>{_brain.name}</b>";
         }
 
-        public override string stringify()
-        {
-            string output = base.stringify();
-
-            if (!canUpdate())
-            {
-                output += "\n NO UPDATE";
-                output += "\n  freeze ? " + isFreezed();
-            }
-            else
-            {
-                output += "\n " + Time.frameCount;
-            }
-
-            return output;
-        }
     }
 
 }
